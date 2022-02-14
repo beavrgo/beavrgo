@@ -112,8 +112,8 @@ function initialize()
 		type: 'pattern', patternUrl: "data/hiro.patt",
 	})
 
-	let geometry1 = new THREE.SphereGeometry(1, 32,32);
-	
+	// let geometry1 = new THREE.SphereGeometry(1,32,32); original
+	let geometry1 = new THREE.TorusGeometry( 5, 2, 8, 40 )
 	let loader = new THREE.TextureLoader();
 	let texture = loader.load( 'images/earth-sphere.jpg', render );
 	let material1 = new THREE.MeshLambertMaterial( { map: texture, opacity: 0.5 } );
