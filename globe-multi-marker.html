@@ -110,7 +110,7 @@ function initialize()
 	// setup markerRoots
 	////////////////////////////////////////////////////////////
 
-	markerNames = ["hiro","kanji"];
+	markerNames = ["hiro","kanji","letterA"];
 	
 	markerArray = [];
 	
@@ -146,7 +146,7 @@ function initialize()
 	markerArray[0].children[0].add( sceneGroup );
 	currentMarkerName = markerNames[0];
 	
-	let pointLight = new THREE.PointLight( 0xffffff, 1, 50 );
+	let pointLight = new THREE.PointLight( 0xffaa00, 1, 50 );
 	camera.add( pointLight );
 }
 
