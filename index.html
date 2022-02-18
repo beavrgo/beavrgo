@@ -1,55 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- ocean + sky waves  -->
-    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.min.js"></script>
-    <script src="https://unpkg.com/aframe-gradient-sky@1.3.0/dist/gradientsky.min.js"></script>
-	
-	<!-- board  -->
-    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-    <script src="util.js"></script>
-    <script src="Game.js"></script>
-    <script src="place-piece.js"></script>
-    <script src="up-flip-down.js"></script>
-    <script src="slide-up-down.js"></script>
-    <script src="flip-emitter.js"></script>
-    <script src="intersection-listener.js"></script>
-    <script src="remove-piece.js"></script>
-    <script src="move-piece.js"></script>
-
-    <title>OPEN CME</title>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene cursor="rayOrigin: mouse">
-      <a-assets>
-        <a-asset-item id="board_gltf" src="board/untitled.gltf"> </a-asset-item>
-      </a-assets>
-	  
-  <!-- ocean + sky -->
-  <a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
-
-      <a-entity id="sphere" geometry="primitive: sphere"
-                material="color: #EFEFEF; shader: flat"
-                position="0 0.15 -5"
-                light="type: point; intensity: 5"
-                animation="property: position; easing: easeInOutQuad; dir: alternate; dur: 1000; to: 0 -0.10 -5; loop: true"></a-entity>
-
-      <a-entity id="ocean" ocean="density: 20; width: 50; depth: 50; speed: 4"
-                material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1"
-                rotation="-90 0 0"></a-entity>
-
-      <a-entity id="sky" geometry="primitive: sphere; radius: 5000"
-                material="shader: gradient; topColor: 235 235 245; bottomColor: 185 185 210"
-                scale="-1 1 1"></a-entity>
-
-      <a-entity id="light" light="type: ambient; color: #888"></a-entity>
-	 
-	 
-	  
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
